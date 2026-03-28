@@ -24,6 +24,7 @@ int main() {
 		int parse_result = parse_user_input(&user_cmd);
 		if (parse_result == 0) {
 			printf("%s\n", user_cmd.cmd);
+			printf("%s\n", user_cmd.extra_input);
 			/* Parse successful, matching commands */
 			if (strcmp(user_cmd.cmd, "exit") == 0) {
 				session.state = 0;

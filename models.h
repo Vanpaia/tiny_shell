@@ -1,7 +1,6 @@
 #ifndef MODELS_H
 #define MODELS_H
 
-#include <string.h>
 #include "config.h"
 
 /* This struct contains the state of the current shell session */
@@ -13,6 +12,7 @@ struct SessionState {
 struct ShellCommand {
 	char line[BUFFER_SIZE];
 	char cmd[16];
+	int cmd_no;
 	char flags[MAX_FLAGS][16]; 
 	int flag_no;
 	int extra_state;

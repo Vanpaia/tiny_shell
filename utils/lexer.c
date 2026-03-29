@@ -1,5 +1,7 @@
 #include "lexer.h"
-#include "config.h"
+#include "../config.h"
+
+#include <stdio.h>
 
 /* This first lexer version assumes ASCII input only (pointer arithmatic) and should be upgraded to UTF-8 in due time */
 /* It also only reads tokens that have been pre-processed by strtok, as such it also returns whether a comment is still open */

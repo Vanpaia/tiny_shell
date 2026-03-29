@@ -1,6 +1,6 @@
 #include <assert.h>
 
-#include "lexer.h"
+#include "../utils/lexer.h"
 
 int test_lexer() {
 	/* First we test a command that is too long */

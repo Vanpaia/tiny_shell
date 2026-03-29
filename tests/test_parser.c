@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "config.h"
-#include "models.h"
-#include "parser.h"
+#include "../config.h"
+#include "../models.h"
+#include "../utils/parser.h"
 
 int test_parse_buffer() {
 	struct ShellCommand test_cmd;

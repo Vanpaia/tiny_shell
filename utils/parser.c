@@ -1,6 +1,8 @@
+#include "../config.h"
 #include "parser.h"
-#include "config.h"
+
 #include <string.h>
+#include <stdio.h>
 
 /* This includes the parser function, turning the user input into a shell command */
 /* 0 = Success; -1 = Error: No input; 1 = Error: Invalid flags; 2 = Error: Invalid cmd; 3 = Error: Invalid Comment */
@@ -23,6 +25,7 @@ int parse_user_input(struct ShellCommand *c) {
 			if (((asciiValue >= 97 && asciiValue <= 122) || (asciiValue >= 65 && asciiValue <= 90)) && strlen(pch) <=15 ){
 				strncpy(c->cmd, pch, 15);
 				c->cmd[strlen(pch)] = '\0';
+				c->cmd_no++;
 			} else {
 				/* Return error invalid cmd */
 				return 2;
